@@ -1,0 +1,667 @@
+dvc repro          
+Stage 'data_ingestion' didn't change, skipping
+Stage 'feature_engineering' didn't change, skipping
+Stage 'train_model' didn't change, skipping
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+WARNING:dvclive:Some DVCLive features are unsupported in `dvc repro`.
+To use DVCLive with a DVC Pipeline, run it with `dvc exp run`.
+ERROR: failed to reproduce 'evaluate_model': output 'metrics.json' does not exist
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc repro
+Stage 'data_ingestion' didn't change, skipping
+Stage 'feature_engineering' didn't change, skipping
+Stage 'train_model' didn't change, skipping
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+WARNING:dvclive:Some DVCLive features are unsupported in `dvc repro`.
+To use DVCLive with a DVC Pipeline, run it with `dvc exp run`.
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+        git add dvc.lock .gitignore
+
+To enable auto staging, run:
+
+        dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp show
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment   Created    metrics.json:accuracy   metrics.json:precision   metrics.json:recall   metrics.json:f1   dvclive\metrics.json:accuracy   dvclive\metrics.json:precision   dvclive\metrics.json:recall   dvclive\metrics.json:f1   feature_engineering.n_components   model_training.n_estimators   model_training.max_depth   model_training.bootstrap   model_training.criterion   feature_engineering_n_components   model_training_n_estimators   model_training_max_depth   model_training_bootstrap   model_training_criterion   data\processed\test_processed.csv   data\processed\train_processed.csv   data\raw\test.csv                  data\raw\train.csv                 model.pkl                          src\data_ingestion.py              src\feature_engineering.py       
+  src\model_evaluation.py            src\model_training.py
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace    -                           0.65                  0.71429                   0.5           0.58824                 
+           0.65                          0.71429                           0.5                   0.58824   3                     
+             16                            3                          False                      gini                       3                                  16                            3                          False                      gini           
+            6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   4c362dae49825dd35ad8aee2b5f79860   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6 
+  d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48 
+  master       10:38 AM                       !                        !                     !                 !                 
+              !                                !                             !                         !   3                     
+             16                            3                          False                      gini                       !                                  !                             !                          !                          !              
+            -                                   -                                    -                                  -                                  -                                  -                                  -                                
+  -                                  -
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run
+Reproducing experiment 'surgy-acid'
+Building workspace index                                                                              |9.00 [00:00,  440entry/s]
+Comparing indexes                                                                                    |10.0 [00:00, 1.17kentry/s] 
+Applying changes                                                                                      |0.00 [00:00,     ?file/s] 
+Stage 'data_ingestion' didn't change, skipping
+Stage 'feature_engineering' didn't change, skipping
+Stage 'train_model' didn't change, skipping
+Stage 'evaluate_model' didn't change, skipping
+
+Ran experiment(s): surgy-acid
+Experiment results have been applied to your workspace.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp show
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment                 Created    metrics.json:accuracy   metrics.json:precision   metrics.json:recall   metrics.json:f1   dvclive\metrics.json:accuracy   dvclive\metrics.json:precision   dvclive\metrics.json:recall   dvclive\metrics.json:f1   feature_engineering.n_components   model_training.n_estimators   model_training.max_depth   model_training.bootstrap   model_training.criterion   feature_engineering_n_components   model_training_n_estimators   model_training_max_depth   model_training_bootstrap   model_training_criterion   data\processed\test_processed.csv   data\processed\train_processed.csv   data\raw\test.csv             
+     data\raw\train.csv                 model.pkl                          src\data_ingestion.py              src\feature_engineering.py         src\model_evaluation.py            src\model_training.py             
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace                  -                           0.65                  0.71429                   0.5           0.58824                            0.65                          0.71429                           0.5                   0.58824   3                                  16                            3                          False                      gini              
+         3                                  16                            3                          False                      gini                       6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   4c362dae49825dd35ad8aee2b5f79860   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6   d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48 
+  master                     10:38 AM                       !                        !                     !                 !                               !                                !                             !                         !   3                                  16                            3                          False                      gini              
+         !                                  !                             !                          !                          !                          -                                   -                                    -                             
+     -                                  -                                  -                                  -                  
+                -                                  -
+  └── 3458e88 [surgy-acid]   10:47 AM                    0.65                  0.71429                   0.5           0.58824                            0.65                          0.71429                           0.5                   0.58824   3                                  16                            3                          False                      gini              
+         3                                  16                            3                          False                      gini                       6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   4c362dae49825dd35ad8aee2b5f79860   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6   d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run 
+Reproducing experiment 'juicy-tape'
+Building workspace index                                                                              |9.00 [00:00,  315entry/s]
+Comparing indexes                                                                                     |10.0 [00:00,  665entry/s] 
+Applying changes                                                                                      |0.00 [00:00,     ?file/s] 
+Stage 'data_ingestion' didn't change, skipping
+Running stage 'feature_engineering':
+> python src/feature_engineering.py
+Traceback (most recent call last):
+  File "src/feature_engineering.py", line 37, in <module>
+    train_processed = pd.DataFrame(X_train_pca, columns=[f'PC{i+1}' for i in range(3)])
+  File "C:\Users\user\anaconda3\envs\venv\lib\site-packages\pandas\core\frame.py", line 722, in __init__
+    mgr = ndarray_to_mgr(
+  File "C:\Users\user\anaconda3\envs\venv\lib\site-packages\pandas\core\internals\construction.py", line 349, in ndarray_to_mgr  
+    _check_values_indices_shape_match(values, index, columns)
+  File "C:\Users\user\anaconda3\envs\venv\lib\site-packages\pandas\core\internals\construction.py", line 420, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (80, 2), indices imply (80, 3)
+ERROR: failed to reproduce 'feature_engineering': failed to run: python src/feature_engineering.py, exited with 1
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run
+Reproducing experiment 'finny-care'
+Building workspace index                                                                              |7.00 [00:00,  355entry/s]
+Comparing indexes                                                                                     |10.0 [00:00,  656entry/s] 
+Applying changes                                                                                      |2.00 [00:00,   209file/s] 
+Stage 'data_ingestion' didn't change, skipping
+Stage 'feature_engineering' didn't change, skipping
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+
+Ran experiment(s): finny-care
+Experiment results have been applied to your workspace.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp show
+WARNING: Unable to find `less` in the PATH. Check out <https://man.dvc.org/pipeline/show> for more info.
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Experiment                 Created    metrics.json:accuracy   metrics.json:precision   metrics.json:recall   metrics.json:f1   dvclive\metrics.json:accuracy   dvclive\metrics.json:precision   dvclive\metrics.json:recall   dvclive\metrics.json:f1   feature_engineering.n_components   model_training.n_estimators   model_training.max_depth   model_training.bootstrap   model_training.criterion   feature_engineering_n_components   model_training_n_estimators   model_training_max_depth   model_training_bootstrap   model_training_criterion   data\processed\test_processed.csv   data\processed\train_processed.csv   data\raw\test.csv             
+     data\raw\train.csv                 model.pkl                          src\data_ingestion.py              src\feature_engineering.py         src\model_evaluation.py            src\model_training.py             
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  workspace                  -                            0.4                  0.33333                   0.2              0.25                             0.4                          0.33333                           0.2                      0.25   3                                  50                            20                         True                       entropy           
+         3                                  50                            20                         True                       entropy                    6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   1ce7bd23489f79a43516a85674c19cba   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6   d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48 
+  master                     10:38 AM                       !                        !                     !                 !                               !                                !                             !                         !   3                                  16                            3                          False                      gini              
+         !                                  !                             !                          !                          !                          -                                   -                                    -                             
+     -                                  -                                  -                                  -                  
+                -                                  -
+  ├── c4cd6de [finny-care]   10:51 AM                     0.4                  0.33333                   0.2              0.25                             0.4                          0.33333                           0.2                      0.25   3                                  50                            20                         True                       entropy           
+         3                                  50                            20                         True                       entropy                    6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   1ce7bd23489f79a43516a85674c19cba   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6   d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48
+  └── 3458e88 [surgy-acid]   10:47 AM                    0.65                  0.71429                   0.5           0.58824                            0.65                          0.71429                           0.5                   0.58824   3                                  16                            3                          False                      gini              
+         3                                  16                            3                          False                      gini                       6e659fcd60532bae6c02832da3457935    96df857c097c5596d7e3bf2db4d807c8     7443713d68c4d3c19499b7eaba1c672d   e3979e36262893c4bc47f559364f695e   4c362dae49825dd35ad8aee2b5f79860   bdc15f0304f59ce710b4d4dc51345373   d1beb2a340ed99d6c1a8d1b30145d6b6   d0fb0803099c997849b309079e395459   bc44159337af4b1075009835f3065e48
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp diff finny-care surgy-acid
+Path                  Metric     finny-care    surgy-acid    Change
+metrics.json          accuracy   0.4           0.65          0.25
+metrics.json          f1         0.25          0.58824       0.33824
+metrics.json          precision  0.33333       0.71429       0.38095
+metrics.json          recall     0.2           0.5           0.3
+dvclive\metrics.json  accuracy   0.4           0.65          0.25
+dvclive\metrics.json  f1         0.25          0.58824       0.33824
+dvclive\metrics.json  precision  0.33333       0.71429       0.38095
+dvclive\metrics.json  recall     0.2           0.5           0.3
+
+Path                 Param                        finny-care    surgy-acid    Change
+params.yaml          model_training.bootstrap     True          False         -1
+params.yaml          model_training.criterion     entropy       gini          diff not supported
+params.yaml          model_training.max_depth     20            3             -17
+params.yaml          model_training.n_estimators  50            16            -34
+dvclive\params.yaml  model_training_bootstrap     True          False         -1
+dvclive\params.yaml  model_training_criterion     entropy       gini          diff not supported
+dvclive\params.yaml  model_training_max_depth     20            3             -17
+dvclive\params.yaml  model_training_n_estimators  50            16            -34
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=2']}'.
+Queued experiment 'lairy-paws' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=3']}'.
+Queued experiment 'raspy-shad' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=5']}'.
+Queued experiment 'lowse-ossa' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=2']}'.
+Queued experiment 'snaky-hems' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=3']}'.
+Queued experiment 'unwed-tirl' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=5']}'.
+Queued experiment 'lated-skin' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=2']}'.
+Queued experiment 'naked-aria' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=3']}'.
+Queued experiment 'murky-yank' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=5']}'.
+Queued experiment 'spent-stir' for future execution.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run --run-all
+Following logs for all queued experiments. Use Ctrl+C to stop following logs (experiment execution will continue).
+
+Reproducing experiment 'lairy-paws'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp4tw_sx7m\data\processed\train_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'raspy-shad'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp97kfjxml\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'lowse-ossa'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpymq62c7m\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'snaky-hems'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp43ta4_b4\data\processed\train_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'unwed-tirl'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpzaytc4ze\data\processed\test_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'lated-skin'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp2pe157gz\data\processed\test_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'naked-aria'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp_lkon2na\data\raw\train.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'murky-yank'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp69py1ejk\data\processed\test_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+Reproducing experiment 'spent-stir'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpcn1de8e2\data\raw\train.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'train_model':
+> python src/model_training.py
+bootstrap -> True -> <class 'bool'>
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluate_model':
+> python src/model_evaluation.py
+Updating lock file 'dvc.lock'
+ERROR: unexpected error - [Errno 13] The process cannot access the file because it is being used by another process
+
+Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run --run-all
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=2']}'.
+Queued experiment 'loath-boff' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=3']}'.
+Queued experiment 'vagal-pony' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=8', 'model_training.max_depth=5']}'.
+Queued experiment 'zingy-judo' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=2']}'.
+Queued experiment 'pupal-gang' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=3']}'.
+Queued experiment 'sixty-sham' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=16', 'model_training.max_depth=5']}'.
+Queued experiment 'mealy-leas' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=2']}'.
+Queued experiment 'blown-fees' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=3']}'.
+Queued experiment 'ledgy-tire' for future execution.
+Queueing with overrides '{'params.yaml': ['model_training.n_estimators=32', 'model_training.max_depth=5']}'.
+Queued experiment 'fluid-uvea' for future execution.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp run --run-all                                                       
+Following logs for all queued experiments. Use Ctrl+C to stop following logs (experiment execution will continue).
+
+Reproducing experiment 'loath-boff'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptplljlrd\data\processed\train_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'vagal-pony'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpdt4jsp5h\data\processed\test_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'zingy-judo'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpmn52xwjs\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'pupal-gang'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpnc4h8dym\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'sixty-sham'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmphz1kvjlx\data\raw\train.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'mealy-leas'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpjvo7hnhm\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'blown-fees'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmpqr4_2b7x\data\raw\test.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'ledgy-tire'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\data\processed\test_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmptzd2xci_\data\raw\train.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+Reproducing experiment 'fluid-uvea'
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\model.pkl'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\metrics.json'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\data\raw\test.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\data\raw\train.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\data\processed\train_processed.csv'. It won't be created.
+WARNING: No file hash info found for 'D:\ml project 2\dvc-pipeline-exp-tracking\.dvc\tmp\exps\tmp5hw_aojr\data\processed\test_processed.csv'. It won't be created.
+Stage 'data_ingestion' is cached - skipping run, checking out outputs
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Stage 'feature_engineering' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'train_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluate_model' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Ran experiment(s):
+To apply the results of an experiment to your workspace run:
+
+        dvc exp apply <exp>
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc exp apply surgy-acid
+Building workspace index                                                                              |5.00 [00:00,  245entry/s]
+Comparing indexes                                                                                     |10.0 [00:00,  908entry/s] 
+Applying changes                                                                                      |6.00 [00:00,   285file/s] 
+Changes for experiment 'surgy-acid' have been applied to your current workspace.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> dvc status
+Data and pipelines are up to date.
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   dvc.yaml
+        modified:   src/model_evaluation.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        data/
+        dvc.lock
+        dvclive/
+        metics.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git add .
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git commit -m "add best experiment"
+[master 6098f2e] add best experiment
+ 13 files changed, 128 insertions(+), 3 deletions(-)
+ create mode 100644 data/processed/.gitignore
+ create mode 100644 data/raw/.gitignore
+ create mode 100644 dvc.lock
+ create mode 100644 dvclive/metrics.json
+ create mode 100644 dvclive/params.yaml
+ create mode 100644 dvclive/plots/metrics/accuracy.tsv
+ create mode 100644 dvclive/plots/metrics/f1.tsv
+ create mode 100644 dvclive/plots/metrics/precision.tsv
+ create mode 100644 dvclive/plots/metrics/recall.tsv
+ create mode 100644 metics.json
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Screenshot 2024-09-01 105357.png
+        Screenshot 2024-09-01 110842.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git add .
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> git commit -m "add best experiment"
+[master 4a2bb3f] add best experiment
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Screenshot 2024-09-01 105357.png
+ create mode 100644 Screenshot 2024-09-01 110842.png
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking> history
+
+  Id CommandLine
+  -- -----------
+   1 try { . "c:\Users\user\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\browser\... 
+   2 conda create -p venv python==3.10
+   3 conda activate venv
+   4 git init
+   5 dvc init
+   6 git status
+   7 git add .
+   8 git commit -m "initial commit"
+   9 dvc dag
+  10 dvc repro
+  11 git status
+  12 git add .
+  13 git commit -m "initial commit"
+  14 dvc repro
+  15 dvc repro
+  16 dvc exp run
+  17 pip install dvclive
+  18 pip install pyyaml
+  19 python .\src\model_evaluation.py
+  20 dvc repro
+  21 dvc repro
+  22 dvc exp show
+  23 dvc exp run
+  24 dvc exp show
+  25 dvc exp run
+  26 dvc exp run
+  27 dvc exp show
+  28 dvc exp diff finny-care surgy-acid
+  29 dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+  30 dvc exp run --run-all
+  31 dvc exp run --run-all
+  32 dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+  33 dvc exp run --run-all
+  34 dvc exp apply surgy-acid
+  35 dvc status
+  36 git status
+  37 git add .
+  38 git commit -m "add best experiment"
+  39 git status
+  40 git add .
+  41 git commit -m "add best experiment"
+
+
+(venv) PS D:\ml project 2\dvc-pipeline-exp-tracking>

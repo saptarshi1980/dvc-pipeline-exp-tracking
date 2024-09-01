@@ -1,0 +1,41 @@
+  1 try { . "c:\Users\user\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\browser\... 
+   2 conda create -p venv python==3.10
+   3 conda activate venv
+   4 git init
+   5 dvc init
+   6 git status
+   7 git add .
+   8 git commit -m "initial commit"
+   9 dvc dag
+  10 dvc repro
+  11 git status
+  12 git add .
+  13 git commit -m "initial commit"
+  14 dvc repro
+  15 dvc repro
+  16 dvc exp run
+  17 pip install dvclive
+  18 pip install pyyaml
+  19 python .\src\model_evaluation.py
+  20 dvc repro
+  21 dvc repro
+  22 dvc exp show
+  23 dvc exp run
+  24 dvc exp show
+  25 dvc exp run
+  26 dvc exp run
+  27 dvc exp show
+  28 dvc exp diff finny-care surgy-acid
+  29 dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+  30 dvc exp run --run-all
+  31 dvc exp run --run-all
+  32 dvc exp run --queue -S model_training.n_estimators=8,16,32 -S model_training.max_depth=2,3,5
+  33 dvc exp run --run-all
+  34 dvc exp apply surgy-acid
+  35 dvc status
+  36 git status
+  37 git add .
+  38 git commit -m "add best experiment"
+  39 git status
+  40 git add .
+  41 git commit -m "add best experiment"
